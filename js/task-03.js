@@ -36,4 +36,5 @@ const addGalleryMarcup = images.map(({ url, alt }) => {
   }).join("");
 console.log(addGalleryMarcup);
 const gallery = document.querySelector(".gallery");
+gallery.style = "list-style: none; display: flexbox;"
 gallery.insertAdjacentHTML("beforeend", addGalleryMarcup);

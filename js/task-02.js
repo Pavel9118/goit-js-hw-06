@@ -16,11 +16,16 @@ const ingredients = [
   'Condiments',
 ];
 const listIngredients = document.querySelector("#ingredients");
+const addIngredientsArray = [];
+
 ingredients.forEach(element => {
   const addElement = document.createElement("li");
   addElement.textContent = element;
   addElement.classList.add("item");
-  listIngredients.append(addElement);
+  addIngredientsArray.push(addElement);
+  return addIngredientsArray;
+  
 
 });
 
+listIngredients.append(...addIngredientsArray);
